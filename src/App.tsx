@@ -1,3 +1,5 @@
+import { Config } from 'config'
+
 export function App() {
-  return <h1>Vite + TypeScript</h1>
+  return <Config>Vite + TypeScript</Config>
 }
