@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { theme } from 'config'
+import { theme } from 'config/Theme'
 
 export const Container = styled.div`
   width: 100vw;

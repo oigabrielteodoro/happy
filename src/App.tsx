@@ -1,11 +1,11 @@
-import { Config } from 'config'
-
-import { Home } from 'pages'
+import { ThemeGlobalStyle } from 'config/Theme'
+import { Router } from 'config/Router'
 
 export function App() {
   return (
-    <Config>
-      <Home />
-    </Config>
+    <>
+      <Router />
+      <ThemeGlobalStyle />
+    </>
   )
 }

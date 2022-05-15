@@ -1,5 +1,6 @@
-import { theme } from 'config'
 import styled, { css } from 'styled-components'
+
+import { theme } from 'config/Theme'
 
 const variants = {
   yellow: css`
@@ -14,6 +15,7 @@ const variants = {
     &:hover {
       background: ${theme.colors.blue[200]};
       color: ${theme.colors.blue[800]};
+      outline-color: ${theme.colors.blue[200]};
     }
   `,
   blue: css`
@@ -22,6 +24,12 @@ const variants = {
     &:focus {
       outline: ${theme.colors.blue[500]} solid 0.3rem;
       outline-offset: 0.3rem;
+    }
+
+    &:hover {
+      background: ${theme.colors.blue[500]};
+      color: ${theme.colors.white};
+      outline-color: ${theme.colors.blue[500]};
     }
   `,
   green: css`
