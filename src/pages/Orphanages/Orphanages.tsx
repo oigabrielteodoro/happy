@@ -1,3 +1,9 @@
+import { Menu } from './Menu'
+
 export function Orphanages() {
-  return <h1>Orphanages</h1>
+  return (
+    <>
+      <Menu />
+    </>
+  )
 }

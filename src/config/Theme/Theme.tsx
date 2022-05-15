@@ -51,6 +51,7 @@ export const theme = {
     },
     withGradient: {
       blue: 'linear-gradient(329.54deg, #29B6D1 0%, #00C7C7 100%)',
+      cyan: 'linear-gradient(329.54deg, #15B6D6 0%, #15D6D6 100%)',
     },
   },
   spacing: {

@@ -1,3 +1,5 @@
+import { OnlyIcon } from './OnlyIcon'
+
 export function Logo() {
   return (
     <svg
@@ -32,3 +34,5 @@ export function Logo() {
     </svg>
   )
 }
+
+Logo.OnlyIcon = OnlyIcon

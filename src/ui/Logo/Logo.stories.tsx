@@ -9,3 +9,5 @@ export default {
 } as ComponentMeta<typeof Logo>
 
 export const Default = () => <Logo />
+
+export const OnlyIcon = () => <Logo.OnlyIcon />
