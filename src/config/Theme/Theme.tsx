@@ -1,19 +1,26 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const theme = {
+  grid: {
+    maxWidth: '112rem',
+  },
   font: {
     family: 'Nunito, sans-serif',
     sizes: {
       disclaimer: '1.2rem',
       small: '1.4rem',
       paragraph: '1.6rem',
-      subtitle: '2.8rem',
+      subtitle: '2.4rem',
       title: '3.2rem',
+    },
+    lineHeights: {
+      subtitle: '3.4rem',
     },
   },
   layers: {
     base: 1,
     alwaysOnTop: 2,
+    alwaysOnDown: -1,
   },
   colors: {
     white: '#ffffff',
@@ -42,6 +49,9 @@ export const theme = {
     pink: {
       500: '#ff669d',
     },
+    withGradient: {
+      blue: 'linear-gradient(329.54deg, #29B6D1 0%, #00C7C7 100%)',
+    },
   },
   spacing: {
     1: '0.8rem',
@@ -49,7 +59,7 @@ export const theme = {
     3: '1.6rem',
     4: '2.4rem',
     5: '3.2rem',
-    6: '4.2rem',
+    6: '4rem',
     7: '5rem',
   },
 }
@@ -60,7 +70,6 @@ export const ThemeGlobalStyle = createGlobalStyle`
 * {
     margin: 0;
     padding: 0;
-    outline: 0;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

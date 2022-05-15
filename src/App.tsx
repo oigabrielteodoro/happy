@@ -1,5 +1,11 @@
 import { Config } from 'config'
 
+import { Home } from 'pages'
+
 export function App() {
-  return <Config>Vite + TypeScript</Config>
+  return (
+    <Config>
+      <Home />
+    </Config>
+  )
 }
