@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom'
 import { Marker, Popup } from 'react-leaflet'
-import { FiArrowRight } from 'react-icons/fi'
+import { FiArrowRight, FiPlus } from 'react-icons/fi'
 import L from 'leaflet'
 
-import { Map } from 'ui'
+import { theme } from 'config'
+import { Button, Map } from 'ui'
 import mapMarkerImg from 'assets/mapMarker.svg'
 
 import { Menu } from './Menu'
@@ -23,7 +24,7 @@ export function Orphanages() {
     <>
       <Menu />
       <S.Container>
-        <Map>
+        <Map interactive>
           <Marker icon={happyMapIcon} position={[-27.2092052, -49.6401092]}>
             <Popup
               closeButton={false}
@@ -32,13 +33,22 @@ export function Orphanages() {
               className='map-popup'
             >
               Lar das meninas
-              <Link to={'/orphanages/1'}>
-                <FiArrowRight size={20} color='#fff' />
+              <Link to='/orphanages/1'>
+                <Button variant='blue' size='small'>
+                  <FiArrowRight size={20} color={theme.colors.white} />
+                </Button>
               </Link>
             </Popup>
           </Marker>
         </Map>
       </S.Container>
+      <S.CreateButtonWrapper>
+        <Link to='/createOrphanage'>
+          <Button variant='blue' size='medium'>
+            <FiPlus size={28} color={theme.colors.white} />
+          </Button>
+        </Link>
+      </S.CreateButtonWrapper>
     </>
   )
 }

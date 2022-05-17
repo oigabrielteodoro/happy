@@ -19,6 +19,7 @@ const variants = {
     }
   `,
   blue: css`
+    border: 0;
     background: ${theme.colors.blue[500]};
 
     &:focus {
@@ -27,7 +28,7 @@ const variants = {
     }
 
     &:hover {
-      background: ${theme.colors.blue[500]};
+      background: ${theme.colors.blue[400]};
       color: ${theme.colors.white};
       outline-color: ${theme.colors.blue[500]};
     }
@@ -44,16 +45,17 @@ const variants = {
 
 const sizes = {
   small: css`
-    width: 4rem;
-    height: 4rem;
+    min-width: 4rem;
+    min-height: 4rem;
     border-radius: 1.2rem;
   `,
   medium: css`
-    width: 6.4rem;
+    min-width: 6.4rem;
     height: 6.4rem;
+    border-radius: 2rem;
   `,
   large: css`
-    width: 8rem;
+    min-width: 8rem;
     height: 8rem;
     border-radius: 3rem;
     border: 0.2rem solid transparent;

@@ -1,12 +1,12 @@
-import { ReactNode } from 'react'
+import type { ReactNode } from 'react'
 import { MapContainer, MapContainerProps, TileLayer } from 'react-leaflet'
+
+import { MAPBOX_TOKEN } from 'config'
 
 type Props = {
   children: ReactNode
   interactive?: boolean
 } & MapContainerProps
-
-const MAPBOX_TOKEN = import.meta.env.VITE_APP_MAPBOX_TOKEN as string
 
 export function Map({ children, interactive = false, ...props }: Props) {
   return (
@@ -16,7 +16,7 @@ export function Map({ children, interactive = false, ...props }: Props) {
       style={{ width: '100%', height: '100%' }}
       dragging={interactive}
       touchZoom={interactive}
-      zoomControl={interactive}
+      zoomControl={false}
       scrollWheelZoom={interactive}
       doubleClickZoom={interactive}
       {...props}

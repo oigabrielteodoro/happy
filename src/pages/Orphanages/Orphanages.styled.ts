@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import { theme } from 'config'
+
 export const Container = styled.main`
   width: calc(100vw - 44rem);
   height: 100vh;
@@ -7,32 +9,23 @@ export const Container = styled.main`
   display: flex;
   margin-left: auto;
 
+  .leaflet-pane {
+    z-index: ${theme.layers.base};
+  }
+
   .map-popup .leaflet-popup-content-wrapper {
-    background: rgba(255, 255, 255, 0.8);
+    background: ${theme.colors.white};
     box-shadow: 17.2868px 27.6589px 41.4884px rgba(23, 142, 166, 0.16);
-    border-radius: 20px;
+    border-radius: 2rem;
   }
 
   .map-popup .leaflet-popup-content {
-    color: #0089a5;
-    font-size: 20px;
+    color: ${theme.colors.blue[800]};
+    font-size: 2rem;
     font-weight: 700;
-    margin: 8px 12px;
-
+    margin: ${theme.spacing[1]} ${theme.spacing[2]};
     display: flex;
     justify-content: space-between;
-    align-items: center;
-  }
-
-  .map-popup .leaflet-popup-content a {
-    width: 40px;
-    height: 40px;
-    background: #15c3d6;
-    box-shadow: 17.2868px 27.6589px 41.4884px rgba(23, 142, 166, 0.16);
-    border-radius: 12px;
-
-    display: flex;
-    justify-content: center;
     align-items: center;
   }
 
@@ -44,4 +37,11 @@ export const Container = styled.main`
   .map-popup .leaflet-popup-tip {
     display: none;
   }
+`
+
+export const CreateButtonWrapper = styled.div`
+  position: fixed;
+  bottom: 4rem;
+  right: 4rem;
+  z-index: ${theme.layers.alwaysOnTop};
 `
