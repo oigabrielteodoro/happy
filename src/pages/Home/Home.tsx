@@ -35,6 +35,7 @@ export function Home() {
             auto={false}
             size='large'
             variant='yellow'
+            aria-label='Navegar para o mapa de orfanatos'
           >
             <FiArrowRight size={32} strokeWidth={3} />
           </Button>

@@ -1,8 +1,13 @@
-export function OnlyIcon() {
+type Props = {
+  width?: string
+  height?: string
+}
+
+export function OnlyIcon({ width = '64', height = '72' }: Props) {
   return (
     <svg
-      width='64'
-      height='72'
+      width={width}
+      height={height}
       viewBox='0 0 64 72'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'

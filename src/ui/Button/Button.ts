@@ -41,6 +41,21 @@ const variants = {
       outline-offset: 0.3rem;
     }
   `,
+  darkBlue: css`
+    border: 0;
+    color: ${theme.colors.white};
+    background: ${theme.colors.blue[600]};
+
+    &:focus {
+      outline: ${theme.colors.blue[600]} solid 0.3rem;
+      outline-offset: 0.3rem;
+    }
+
+    &:hover {
+      opacity: 0.8;
+      outline-color: ${theme.colors.blue[600]};
+    }
+  `,
 }
 
 const sizes = {

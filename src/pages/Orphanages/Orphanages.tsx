@@ -13,7 +13,6 @@ import * as S from './Orphanages.styled'
 
 const happyMapIcon = L.icon({
   iconUrl: mapMarkerImg,
-
   iconSize: [58, 68],
   iconAnchor: [29, 68],
   popupAnchor: [170, 2],
@@ -24,13 +23,14 @@ export function Orphanages() {
     <>
       <Menu />
       <S.Container>
-        <Map interactive>
+        <Map interactive aria-label='Mapa'>
           <Marker icon={happyMapIcon} position={[-27.2092052, -49.6401092]}>
             <Popup
               closeButton={false}
               minWidth={240}
               maxWidth={240}
               className='map-popup'
+              aria-label='Lar das meninas'
             >
               Lar das meninas
               <Link to='/orphanages/1'>
@@ -43,7 +43,7 @@ export function Orphanages() {
         </Map>
       </S.Container>
       <S.CreateButtonWrapper>
-        <Link to='/createOrphanage'>
+        <Link to='/createOrphanage' aria-label='Criar orfanato'>
           <Button variant='blue' size='medium'>
             <FiPlus size={28} color={theme.colors.white} />
           </Button>

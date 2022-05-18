@@ -37,6 +37,7 @@ export const theme = {
       200: '#96feff',
       400: '#17d6eb',
       500: '#15c3d6',
+      600: '#12AFCB',
       800: '#0089a5',
     },
     yellow: {
