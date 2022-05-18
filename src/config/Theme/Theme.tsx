@@ -62,7 +62,7 @@ export const theme = {
     4: '2.4rem',
     5: '3.2rem',
     6: '4rem',
-    7: '5rem',
+    7: '4.8rem',
   },
 }
 
@@ -88,6 +88,11 @@ export const ThemeGlobalStyle = createGlobalStyle`
     font-size: ${theme.font.sizes.paragraph};
     background-color: ${theme.colors.neutral[50]};
     color: ${theme.colors.neutral[900]};
+  }
+
+  #root {
+    display: flex;
+    flex-direction: column;
   }
 
   button {
